@@ -82,6 +82,7 @@ footer p{
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin-bottom: 175px;
 }
 .intro p{
     margin-top: 30px;
@@ -100,26 +101,24 @@ footer p{
     margin: 0 5px;
 }
 .section-header{
-    margin-top: 175px;
+    margin-bottom: 80px;
+    text-align: center;
 }
 .latest-work{
-    margin: 160px 0;
+    /* margin: 100px 0; */
 }
 .latest-work-card{
     display: flex;
     flex-direction: row;
-    /* flex-wrap: wrap; */
     width: 100vw;
     height: 550px;
     padding: 0 20px;
-    margin-top: 160px;
-    /* background: lightblue; */
+    margin-bottom: 120px;
 }
 .lw-text{
     width: 50%;
     line-height: 125%;
     margin-right: 60px;
-    /* background: lightcoral; */
 }
 .lw-img{
     /* background:palegreen; */
@@ -146,7 +145,7 @@ footer p{
     border-radius: 30px;
 }
 .btn:hover{
-    border: none;
+    border: 1px solid transparent;
     background-color: black ;
     color: white;
 }
@@ -155,7 +154,7 @@ footer p{
     display: inline-block;
     font-size: 24px;
     padding: 15px 30px;
-    border: none;
+    border: 1px solid transparent;
     background-color: black ;
     border-radius: 30px;
     color:white;
@@ -205,8 +204,31 @@ footer p{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+.contact{
+    margin:120px 0;
+}
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    /* margin-bottom: 100px; */
+}
 
-
+form input[type=text],
+form textarea{
+    padding: 10px 20px;
+    width: 360px;
+    border: none;
+    font-size: 18px;
+}
+form input[type=text]{
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+}
+form textarea{
+    margin: 0 0 30px 0;
+    height: 340px;
+    border: 1px solid black;
+}
 /* TYPOGRAPHY */
 h2{
     font-size: 36px;
