@@ -105,27 +105,32 @@ footer p{
     text-align: center;
 }
 .latest-work{
-    /* margin: 100px 0; */
+    width: 100vw;
 }
 .latest-work-card{
     display: flex;
-    flex-direction: row;
-    width: 100vw;
-    height: 550px;
+    max-width: 100%;
+    max-height: 550px;
     padding: 0 20px;
+    margin: 0 auto;
     margin-bottom: 120px;
+
+    background-color: lightblue;
+}
+.latest-work-card > *{
+    width: 50%;
+    border: 1px solid red;
 }
 .lw-text{
-    width: 50%;
     line-height: 125%;
     margin-right: 60px;
 }
 .lw-img{
-    /* background:palegreen; */
-    /* width: 50%; */
+    background:palegreen;
 }
 .lw-img img{
-    height: 100%;
+    /* max-height: 100%; */
+    max-width: 100%;
 }
 .lw-text p:first-of-type{
     margin-top: 15px;
@@ -208,8 +213,12 @@ footer p{
     -webkit-text-fill-color: transparent;
 }
 .contact{
+    display: flex;
+    flex-direction: column;
     margin:120px 0;
-    width: 360px;
+    width: 100%;
+    background-color: lightpink;
+    align-items: center;
 }
 .contact .section-header{
     margin-bottom: 30px;
@@ -221,7 +230,6 @@ footer p{
 .contact-form{
     display: flex;
     flex-direction: column;
-    /* margin-bottom: 100px; */
 }
 
 form input[type=text],
