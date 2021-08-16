@@ -218,6 +218,12 @@ form textarea{
     padding: 10px 20px;
     width: 360px;
     border: none;
+}
+form input[type=text],
+form textarea,
+form input[type=submit]{
+    font-family: 'Kulim Park', sans-serif;
+    font-weight: 400;
     font-size: 18px;
 }
 form input[type=text]{
