@@ -40,6 +40,7 @@ nav a{
     text-align: center;
     color: #464141; 
 }
+/* LINKS */
 a{
     transition: all 0.3s ease-out;
 }
@@ -50,6 +51,21 @@ a:focus,
 a:hover{
     color: var(--ACCMain);
     cursor: pointer;
+}
+/* FOOTER */
+footer{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    flex-wrap: wrap;
+    height:125px;
+    border-top: 1px solid black;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+}
+footer p{
+    display: block;
 }
 /* CONTENT */
 .container{
