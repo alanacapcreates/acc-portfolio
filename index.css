@@ -136,6 +136,9 @@ footer p{
 .latest-work-card .btn{
     margin-top: 70px;
 }
+.latest-work .btn-inverse{
+    margin-top: 0;
+}
 .btn{
     display: inline-block;
     font-size: 16px;
@@ -165,12 +168,12 @@ footer p{
     color: black;
 }
 
-.contact-btn {
+.gradient-btn {
     position:relative;
     margin-left: auto;
     padding:15px 40px;
   }
-.contact-btn::before {
+.gradient-btn::before {
     content:"";
     position:absolute;
     top:0;
@@ -187,13 +190,13 @@ footer p{
     mask-composite: exclude; 
    
   }
-  .contact-btn:hover::before{
+.gradient-btn:hover::before{
     border:5px solid #000;
     border-radius: 30px;
     background: white;
 }
 
-.contact-btn:hover{
+.gradient-btn:hover{
     background: var(--ACCgradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -245,6 +248,12 @@ form textarea{
     margin: 0 0 30px 0;
     height: 340px;
     border: 1px solid black;
+}
+.contact-form .gradient-btn::before{
+    padding: 2px;
+}
+.contact-form .gradient-btn:hover::before{
+    border: 3px solid black;
 }
 /* TYPOGRAPHY */
 h2{
