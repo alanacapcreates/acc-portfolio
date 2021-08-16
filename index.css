@@ -15,6 +15,42 @@ body{
     font-weight: 400;
     font-size: 18px;
 }
+
+/* NAV */
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    top:0;
+    padding: 10px 0;
+    width: 100vw;
+    font-size: 22px;
+    transition: all .2s ease-in 0s;
+    background-color: white;
+}
+nav img{
+    width: 60px;
+    margin: 0 25px;
+}
+nav a{
+    text-decoration: none;
+    display: block;
+    padding: 15px 25px;
+    margin-right: 50px;
+    text-align: center;
+    color: #464141; 
+}
+a{
+    transition: all 0.3s ease-out;
+}
+a:visited{
+    color: black;
+}
+a:focus,
+a:hover{
+    color: var(--ACCMain);
+    cursor: pointer;
+}
 /* CONTENT */
 .container{
     display: flex;
@@ -114,32 +150,6 @@ body{
     color: black;
 }
 
-
-/* NAV */
-nav{
-    display: flex;
-    flex-wrap: wrap;
-    position: fixed;
-    top:0;
-    padding: 10px 0;
-    width: 100vw;
-    font-size: 22px;
-    transition: all .2s ease-in 0s;
-    background-color: white;
-}
-nav img{
-    width: 60px;
-    margin: 0 25px;
-}
-nav a{
-    text-decoration: none;
-    display: block;
-    padding: 15px 25px;
-    margin-right: 50px;
-    text-align: center;
-    color: #464141; 
-    transition: all 0.7s ease;
-}
 .contact-btn {
     position:relative;
     margin-left: auto;
@@ -167,14 +177,7 @@ nav a{
     border-radius: 30px;
     background: white;
 }
-a:visited{
-    color: black;
-}
-a:focus,
-a:hover{
-    color: var(--ACCMain);
-    cursor: pointer;
-}
+
 .contact-btn:hover{
     background: var(--ACCgradient);
     -webkit-background-clip: text;
