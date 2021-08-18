@@ -318,7 +318,7 @@ form textarea{
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    /* justify-content: space-around; */
+    justify-content: center;
     margin:175px 0;
 }
 .project-card{
