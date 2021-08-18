@@ -336,6 +336,23 @@ form textarea{
     flex-direction: row;
     justify-content: space-between;
     margin-top: auto;
+    align-items: center;
+}
+.project-card p{
+    font-size: 14px;
+}
+.project-card a{
+    cursor: pointer;
+}
+.proj-typeCS{
+     padding: 8px 18px;
+     border: 1px solid var(--ACCPink);
+     border-radius: 30px;
+}
+.proj-typeWWDC{
+    padding: 8px 18px;
+    border: 1px solid var(--ACCBlue);
+    border-radius: 30px;
 }
 /* TYPOGRAPHY */
 h2{

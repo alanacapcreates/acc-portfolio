@@ -45,27 +45,27 @@
             },
             {
                 name: "Name Of Project 3",
-                projType: "Case Study"
+                projType: "Weekly Web Dev Challenge"
             },
             {
                 name: "Name Of Project 4",
-                projType: "Case Study"
+                projType: "Weekly Web Dev Challenge"
             },
             {
                 name: "Name Of Project 5",
-                projType: "Case Study"
+                projType: "Weekly Web Dev Challenge"
             },
             {
                 name: "Name Of Project 6",
-                projType: "Case Study"
+                projType: "Weekly Web Dev Challenge"
             },
             {
                 name: "Name Of Project 7",
-                projType: "Case Study"
+                projType: "Weekly Web Dev Challenge"
             },
             {
                 name: "Name Of Project 8",
-                projType: "Case Study"
+                projType: "Weekly Web Dev Challenge"
             }
             ]
             for(let i=0;i<project.length;i++){
@@ -76,7 +76,15 @@
                 let projImg = document.createElement('img')
                 let bottomCard = document.createElement('div')
                 projImg.src='https://via.placeholder.com/314x262.png'
-                projInfo.innerHTML=`<i class="fas fa-info"></i>`
+                projInfo.innerHTML=`<a><i class="fas fa-info-circle fa-2x"></i></a>`
+                    if(project[i].projType === "Case Study"){
+                        projType.classList.remove()
+                        projType.classList.add("proj-typeCS")
+                    }
+                    else if(project[i].projType === "Weekly Web Dev Challenge"){
+                        projType.classList.remove()
+                        projType.classList.add("proj-typeWWDC")
+                    }
                 projType.innerHTML=`${project[i].projType}`
                 card.append(projImg)
                 bottomCard.append(projType,projInfo)
