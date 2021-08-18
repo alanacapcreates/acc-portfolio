@@ -247,6 +247,67 @@ form textarea{
 .contact-form .gradient-btn:hover::before{
     border: 3px solid black;
 }
+.bio-section{
+    margin-bottom: 175px;
+}
+.bio{
+    max-width: 950px;
+}
+.bio p{
+    line-height: 27px;
+}
+.bio svg{
+    display: block;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+.code-container{
+    width: 950px;
+    max-height: 725px;
+    background-color: #FBFBFB;
+    overflow-y: scroll;
+    margin-bottom: 175px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
+}
+.line-numbers{
+    width: 25px;
+    float: left;
+    line-height: 200%;
+    color: var(--ACCGrey);
+    margin-right: 25px;
+}
+.code{
+    float: left;
+    line-height: 200%;
+    font-family: 'Source Code Pro', monospace;
+}
+.indent-code{
+    margin-left:15%;
+}
+.code-toolbar{
+    position: sticky;
+    width: 100%;
+    top:0;
+    background-color: #F8F8F8;
+    padding: 15px;
+    border-bottom: 1px solid #D9D9D9;
+}
+.circle{
+    border-radius: 50%;
+    height: 12px;
+    width: 12px;
+    display: inline-block;
+    margin-right: 10px;
+}
+.code-toolbar .circle:nth-child(1){
+    background-color: #FF5454;
+}
+.code-toolbar .circle:nth-child(2){
+    background-color: #FFBF43;
+}
+.code-toolbar .circle:nth-child(3){
+    background-color: #90DE2C;
+}
 /* TYPOGRAPHY */
 h2{
     font-size: 36px;
@@ -257,9 +318,24 @@ h3{
 em{
     font-style: italic;
 }
+.bold{
+    font-weight: 600;
+}
 .underline{
     text-decoration: underline;
 }
 .subtitle{
+    color: var(--ACCGrey);
+}
+.ACCBlue{
+    color: var(--ACCBlue);
+}
+.ACCPink{
+    color: var(--ACCPink);
+}
+.ACCGreen{
+    color: var(--ACCGreen);
+}
+.ACCGrey{
     color: var(--ACCGrey);
 }
