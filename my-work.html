@@ -71,9 +71,16 @@
             for(let i=0;i<project.length;i++){
                 let cardSection = document.getElementById("projects");
                 let card = document.createElement('div')
-                let cardText = document.createElement('p')
-                cardText.innerHTML=`${project[i].name}`
-                card.append(cardText)
+                let projInfo = document.createElement('p')
+                let projType = document.createElement('p')
+                let projImg = document.createElement('img')
+                let bottomCard = document.createElement('div')
+                projImg.src='https://via.placeholder.com/314x262.png'
+                projInfo.innerHTML=`<i class="fas fa-info"></i>`
+                projType.innerHTML=`${project[i].projType}`
+                card.append(projImg)
+                bottomCard.append(projType,projInfo)
+                card.append(bottomCard)
                 card.classList.add("project-card")
                 cardSection.append(card)
             }
