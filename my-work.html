@@ -17,7 +17,12 @@
         </nav>
         <div class="container">
             <h2 class="section-header"><span class="gradient-text"><</span>My Work<span class="gradient-text">/></span></h2>
-            <section>
+            <p>&lt;!--Filter By: --&gt;</p>
+            <a>All Projects</a>
+            <a>Case Study</a>
+            <a>Weekly Web Dev Challenge</a>
+
+            <section id="projects" class = "projects">
                 
             </section>
 
@@ -29,5 +34,14 @@
             </footer>
 
         </div> <!-- END OF CONTAINER -->
+        <script>
+            let cardSection = document.getElementById("projects");
+            let card = document.createElement('div')
+            let cardText = document.createElement('p')
+            cardText.innerText="Hello World"
+            card.append(cardText)
+            card.classList.add("project-card")
+            cardSection.append(card)
+        </script>
     </body>
 </html>

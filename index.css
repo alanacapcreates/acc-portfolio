@@ -313,6 +313,14 @@ form textarea{
 .code-toolbar .circle:nth-child(3){
     background-color: #90DE2C;
 }
+.projects{
+    margin:175px 0;
+}
+.project-card{
+    width: 360px;
+    height: 360px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
+}
 /* TYPOGRAPHY */
 h2{
     font-size: 36px;
