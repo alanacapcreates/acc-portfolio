@@ -17,10 +17,12 @@
         </nav>
         <div class="container">
             <h2 class="section-header"><span class="gradient-text"><</span>My Work<span class="gradient-text">/></span></h2>
-            <p>&lt;!--Filter By: --&gt;</p>
-            <a>All Projects</a>
-            <a>Case Study</a>
-            <a>Weekly Web Dev Challenge</a>
+            
+                <p>&lt;!--Filter By: --&gt;</p>
+                <a id="allProj" class="filter-btn proj-all-btn">All Projects</a>
+                <a id="caseStudyProj" class="filter-btn proj-cs-btn">Case Study</a>
+                <a id="wwdcProj" class="filter-btn proj-wwdc-btn">Weekly Web Dev Challenge</a>
+            
 
             <section id="projects" class = "projects">
                 
@@ -35,6 +37,17 @@
 
         </div> <!-- END OF CONTAINER -->
         <script>
+            let allProj = document.getElementById("allProj")
+            let caseStudyProj = document.getElementById("caseStudyProj")
+            let wwdcProj = document.getElementById("wwdcProj")
+
+            
+            allProj.addEventListener("click", displayProj)
+            caseStudyProj.addEventListener("click", displayProj)
+            wwdcProj.addEventListener("click", displayProj)
+
+            let cardSection = document.getElementById("projects");
+
             let project =[{
                 name: "Name Of Project 1",
                 projType: "Case Study"
@@ -68,30 +81,76 @@
                 projType: "Weekly Web Dev Challenge"
             }
             ]
-            for(let i=0;i<project.length;i++){
-                let cardSection = document.getElementById("projects");
-                let card = document.createElement('div')
-                let projInfo = document.createElement('p')
-                let projType = document.createElement('p')
-                let projImg = document.createElement('img')
-                let bottomCard = document.createElement('div')
-                projImg.src='https://via.placeholder.com/314x262.png'
-                projInfo.innerHTML=`<a><i class="fas fa-info-circle fa-2x"></i></a>`
-                    if(project[i].projType === "Case Study"){
-                        projType.classList.remove()
-                        projType.classList.add("proj-typeCS")
-                    }
-                    else if(project[i].projType === "Weekly Web Dev Challenge"){
-                        projType.classList.remove()
-                        projType.classList.add("proj-typeWWDC")
-                    }
-                projType.innerHTML=`${project[i].projType}`
-                card.append(projImg)
-                bottomCard.append(projType,projInfo)
-                card.append(bottomCard)
-                card.classList.add("project-card")
-                cardSection.append(card)
+            function renderCards(filterA){
+                for(let i=0;i<filterA.length;i++){
+                    
+                    let card = document.createElement('div')
+                    let projInfo = document.createElement('p')
+                    let projType = document.createElement('p')
+                    let projImg = document.createElement('img')
+                    let bottomCard = document.createElement('div')
+                    projImg.src='https://via.placeholder.com/314x262.png'
+                    projInfo.innerHTML=`<a><i class="fas fa-info-circle fa-2x"></i></a>`
+                        if(filterA[i].projType === "Case Study"){
+                            projType.classList.remove()
+                            projType.classList.add("proj-typeCS")
+                        }
+                        else if(filterA[i].projType === "Weekly Web Dev Challenge"){
+                            projType.classList.remove()
+                            projType.classList.add("proj-typeWWDC")
+                        }
+                    projType.innerHTML=`${filterA[i].projType}`
+                    card.append(projImg)
+                    bottomCard.append(projType,projInfo)
+                    card.append(bottomCard)
+                    card.classList.add("project-card")
+                    cardSection.append(card)
+                }
             }
+
+            function displayProj(){
+                cardSection.innerHTML = ""
+                if(event.target.id ==="allProj"){
+                    allProj.classList.remove("proj-all-btn")
+                    allProj.classList.add("proj-all-btn-active")
+
+                    caseStudyProj.classList.remove("proj-cs-btn-active")
+                    caseStudyProj.classList.add("proj-cs-btn")
+
+                    wwdcProj.classList.remove("proj-wwdc-btn-active")
+                    wwdcProj.classList.add("proj-wwdc-btn")
+
+                    renderCards(project)
+                }
+                else if(event.target.id ==="caseStudyProj"){
+                    allProj.classList.remove("proj-all-btn-active")
+                    allProj.classList.add("proj-all-btn")
+
+                    caseStudyProj.classList.remove("proj-cs-btn")
+                    caseStudyProj.classList.add("proj-cs-btn-active")
+
+                    wwdcProj.classList.remove("proj-wwdc-btn-active")
+                    wwdcProj.classList.add("proj-wwdc-btn")
+
+                    let caseStudyFilter = project.filter(activity => (activity.projType.includes("Case Study")))
+                    renderCards(caseStudyFilter)
+                }
+                else if(event.target.id ==="wwdcProj"){
+                    allProj.classList.remove("proj-all-btn-active")
+                    allProj.classList.add("proj-all-btn")
+
+                    caseStudyProj.classList.remove("proj-cs-btn-active")
+                    caseStudyProj.classList.add("proj-cs-btn")
+
+                    wwdcProj.classList.remove("proj-wwdc-btn")
+                    wwdcProj.classList.add("proj-wwdc-btn-active")
+
+                    let wwdcFilter = project.filter(activity => (activity.projType.includes("Weekly Web Dev Challenge")))
+                    renderCards(wwdcFilter)
+                }
+            }
+
+            
         </script>
     </body>
 </html>

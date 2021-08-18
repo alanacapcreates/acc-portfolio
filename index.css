@@ -313,6 +313,47 @@ form textarea{
 .code-toolbar .circle:nth-child(3){
     background-color: #90DE2C;
 }
+#allProj:focus,
+#caseStudyProj:focus,
+#wwdcProj:focus,
+#allProj:hover,
+#caseStudyProj:hover,
+#wwdcProj:hover{
+    transform: scale(1.1);
+    color: black;
+}
+.filter-btn:nth-of-type(1){
+    margin-top:30px;
+}
+.filter-btn{
+    padding: 15px 30px;
+    border-radius: 30px;
+    margin: 5px;
+}
+.proj-all-btn-active{
+    background-color: var(--ACCGreen);
+    color: white;
+}
+.proj-all-btn{
+    border: 1px solid var(--ACCGreen);
+    color: black;
+}
+.proj-cs-btn-active{
+    background-color: var(--ACCPink);
+    color: white;
+}
+.proj-cs-btn{
+    border: 1px solid var(--ACCPink);
+    color: black;
+}
+.proj-wwdc-btn{
+    border: 1px solid var(--ACCBlue);
+    color: black;
+}
+.proj-wwdc-btn-active{
+    background-color: var(--ACCBlue);
+    color: white;
+}
 .projects{
     display: flex;
     flex-direction: row;
