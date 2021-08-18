@@ -38,11 +38,11 @@ nav a{
     padding: 15px 25px;
     margin-right: 50px;
     text-align: center;
-    color: #464141; 
 }
 /* LINKS */
 a{
     transition: all 0.3s ease-out;
+    color: black;
 }
 a:visited{
     color: black;
