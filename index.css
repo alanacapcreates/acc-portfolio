@@ -152,6 +152,10 @@ footer p{
     background-color: black ;
     border-radius: 30px;
     color:white;
+    text-decoration: none;
+}
+.btn-inverse:visited{
+    color: white;
 }
 .btn-inverse:hover{
     border: 1px solid black;
