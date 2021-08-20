@@ -50,35 +50,43 @@
 
             let project =[{
                 name: "Name Of Project 1",
-                projType: "Case Study"
+                projType: "Case Study",
+                projImg: './img/projects/proj-cover-KMCLogo.png'
             },
             {
                 name: "Name Of Project 2",
-                projType: "Case Study"
+                projType: "Case Study",
+                projImg: './img/projects/proj-cover-KMCSite.png'
             },
             {
                 name: "Name Of Project 3",
-                projType: "Weekly Web Dev Challenge"
+                projType: "Weekly Web Dev Challenge",
+                projImg: './img/projects/proj-cover-WWDC-TipCalc.png'
             },
             {
                 name: "Name Of Project 4",
-                projType: "Weekly Web Dev Challenge"
+                projType: "Weekly Web Dev Challenge",
+                projImg: './img/projects/proj-cover-WWDC-Freestyle.png'
             },
             {
                 name: "Name Of Project 5",
-                projType: "Weekly Web Dev Challenge"
+                projType: "Weekly Web Dev Challenge",
+                projImg: './img/projects/proj-cover-WWDC-SocialDogs.png'
             },
             {
                 name: "Name Of Project 6",
-                projType: "Weekly Web Dev Challenge"
+                projType: "Weekly Web Dev Challenge",
+                projImg: './img/projects/proj-cover-WWDC-Accessibility.png'
             },
             {
                 name: "Name Of Project 7",
-                projType: "Weekly Web Dev Challenge"
+                projType: "Weekly Web Dev Challenge",
+                projImg: './img/projects/proj-cover-WWDC-EnergyMeter.png'
             },
             {
                 name: "Name Of Project 8",
-                projType: "Weekly Web Dev Challenge"
+                projType: "Weekly Web Dev Challenge",
+                projImg: './img/projects/proj-cover-WWDC-NameBeautifier.png'
             }
             ]
             function renderCards(filterA){
@@ -89,7 +97,7 @@
                     let projType = document.createElement('p')
                     let projImg = document.createElement('img')
                     let bottomCard = document.createElement('div')
-                    projImg.src='https://via.placeholder.com/314x262.png'
+                    // projImg.src='https://via.placeholder.com/314x262.png'
                     projInfo.innerHTML=`<a><i class="fas fa-info-circle fa-2x"></i></a>`
                         if(filterA[i].projType === "Case Study"){
                             projType.classList.remove()
@@ -100,6 +108,7 @@
                             projType.classList.add("proj-typeWWDC")
                         }
                     projType.innerHTML=`${filterA[i].projType}`
+                    projImg.src = filterA[i].projImg
                     card.append(projImg)
                     bottomCard.append(projType,projInfo)
                     card.append(bottomCard)
