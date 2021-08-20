@@ -52,42 +52,62 @@
             let cardSection = document.getElementById("projects");
 
             let project =[{
-                name: "Name Of Project 1",
+                name: "Ketcham Medicine Cabinets: Rebranding in 2021",
+                date: "September 2020 - December 2020",
+                projDesc: "KMC sought out to create a new brand identity that would increase sales, match their new modern aesthetic, and appeal to a wider + more luxury clientele. Read on to explore my process in creating their new logo.",
                 projType: "Case Study",
                 projImg: './img/projects/proj-cover-KMCLogo.png'
             },
             {
-                name: "Name Of Project 2",
+                name: "Ketcham Medicine Cabinets: Upgraded Curb Appeal",
+                date: "September 2020 - December 2020" ,
+                projDesc: "Now that Ketcham has a new brand identity, the next step is to match that aesthetic with an updated website. Read on to see my process in giving ketchamcabinets.com a modern makeover.",
                 projType: "Case Study",
                 projImg: './img/projects/proj-cover-KMCSite.png'
             },
             {
-                name: "Name Of Project 3",
+                name: "Tip Calculator",
+                date: "June 26, 2021",
+                projDesc: "Create a tip calculator that shows the tip and total per person",
                 projType: "Weekly Web Dev Challenge",
                 projImg: './img/projects/proj-cover-WWDC-TipCalc.png'
             },
             {
-                name: "Name Of Project 4",
+                name: "Freestyle Challenge",
+                date: "July 03, 2021" ,
+                projDesc: "Create an app or site of your choice. The only stipulation is that it must include an array, a loop, and an event listener." ,
                 projType: "Weekly Web Dev Challenge",
                 projImg: './img/projects/proj-cover-WWDC-Freestyle.png'
             },
             {
-                name: "Name Of Project 5",
+                name: "Social Media for Dogs",
+                date: "July 12, 2021",
+                projDesc: "Create a social media landing page for dogs, cats, or any other theme.",
                 projType: "Weekly Web Dev Challenge",
                 projImg: './img/projects/proj-cover-WWDC-SocialDogs.png'
             },
             {
-                name: "Name Of Project 6",
+                name: "Fix The Accessibility Issues",
+                date: "July 14, 2021" ,
+                projDesc: "Fix this form to make it more accessible . There are at least seven issues.",
                 projType: "Weekly Web Dev Challenge",
                 projImg: './img/projects/proj-cover-WWDC-Accessibility.png'
             },
             {
-                name: "Name Of Project 7",
+                name: "Energy Meter",
+                date: "July 19, 2021",
+                projDesc: "Create an enerygy meter that adjusts depending on user input" ,
                 projType: "Weekly Web Dev Challenge",
                 projImg: './img/projects/proj-cover-WWDC-EnergyMeter.png'
             },
             {
-                name: "Name Of Project 8",
+                name: "Name Beautifier",
+                date: "July 25, 2021",
+                projDesc: `When the button is clicked, the following things should change:<br><br>
+                        - font family (use array given)<br>
+                        - font color (either use randomcolor or your own array of colors)<br>
+                        - font weight<br>
+                        - button color (match the font color)`,
                 projType: "Weekly Web Dev Challenge",
                 projImg: './img/projects/proj-cover-WWDC-NameBeautifier.png'
             }
@@ -106,12 +126,21 @@
                     projInfo.addEventListener("click",infoclick)
 
                     function infoclick(event){
-                let overlay = document.createElement('div')
-                let overlayText = document.createElement('div')
-                    overlayText.innerHTML = `${filterA[i].name}`
-                    overlay.append(overlayText)
-                    overlay.classList.add('overlayDiv')
-                    cardSection.append(overlay)
+                        let overlay = document.createElement('div')
+                        let overlayText = document.createElement('div')
+                        let closeBtn = document.createElement('div')
+
+                        closeBtn.classList.add('close-btn')
+                        closeBtn.innerHTML = `<i class="fas fa-times fa-lg"></i>`
+
+                        closeBtn.addEventListener("click", ()=>{overlay.style.display="none"})       
+                        overlayText.innerHTML = `${filterA[i].name} <br><br> ${filterA[i].date}<br><br> ${filterA[i].projDesc}`
+
+                        overlay.append(overlayText)
+                        overlay.append(closeBtn)
+                        overlay.classList.add('overlayDiv')
+                        
+                        card.append(overlay)
                 
             }
 

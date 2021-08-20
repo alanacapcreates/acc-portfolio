@@ -399,11 +399,22 @@ form textarea{
 }
 .overlayDiv{
     position: absolute;
+    top: 0;
+    left: 0;
     display: inline-block;
+    padding: 10px;
     background-color: rgba(0, 0, 0, 0.83);
     color: white;
     width: 360px;
     height: 360px;
+}
+.close-btn{
+    position: absolute;
+    top: 2%;
+    right: 3%;
+}
+.close-btn:hover{
+    cursor: pointer;
 }
 /* TYPOGRAPHY */
 h2{
