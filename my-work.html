@@ -70,35 +70,45 @@
                 date: "June 26, 2021",
                 projDesc: "Create a tip calculator that shows the tip and total per person",
                 projType: "Weekly Web Dev Challenge",
-                projImg: './img/projects/proj-cover-WWDC-TipCalc.png'
+                projImg: './img/projects/proj-cover-WWDC-TipCalc.png',
+                github: "#",
+                liveSite: "#"
             },
             {
                 name: "Freestyle Challenge",
                 date: "July 03, 2021" ,
                 projDesc: "Create an app or site of your choice. The only stipulation is that it must include an array, a loop, and an event listener." ,
                 projType: "Weekly Web Dev Challenge",
-                projImg: './img/projects/proj-cover-WWDC-Freestyle.png'
+                projImg: './img/projects/proj-cover-WWDC-Freestyle.png',
+                github: "https://github.com/alanacapcreates/WWDC-Freestyle-0721",
+                liveSite: "https://alanacapcreates-wwdc-freestyle070521.netlify.app/"
             },
             {
                 name: "Social Media for Dogs",
                 date: "July 12, 2021",
                 projDesc: "Create a social media landing page for dogs, cats, or any other theme.",
                 projType: "Weekly Web Dev Challenge",
-                projImg: './img/projects/proj-cover-WWDC-SocialDogs.png'
+                projImg: './img/projects/proj-cover-WWDC-SocialDogs.png',
+                github: "https://github.com/alanacapcreates/WWDC-SocialMediaForDogs-0721",
+                liveSite: "https://alanacapcreates-wwdc-dogbasket071221.netlify.app/"
             },
             {
                 name: "Fix The Accessibility Issues",
                 date: "July 14, 2021" ,
                 projDesc: "Fix this form to make it more accessible . There are at least seven issues.",
                 projType: "Weekly Web Dev Challenge",
-                projImg: './img/projects/proj-cover-WWDC-Accessibility.png'
+                projImg: './img/projects/proj-cover-WWDC-Accessibility.png',
+                github: "https://github.com/alanacapcreates/WWDC-Accessibility-0721",
+                liveSite: "https://alanacapcreates-wwdc-accessibility070721.netlify.app/"
             },
             {
                 name: "Energy Meter",
                 date: "July 19, 2021",
                 projDesc: "Create an enerygy meter that adjusts depending on user input" ,
                 projType: "Weekly Web Dev Challenge",
-                projImg: './img/projects/proj-cover-WWDC-EnergyMeter.png'
+                projImg: './img/projects/proj-cover-WWDC-EnergyMeter.png',
+                github: "https://github.com/alanacapcreates/WWDC-EnergyMeter-0721",
+                liveSite: "https://alanacapcreates-wwdc-energymeter071921.netlify.app/"
             },
             {
                 name: "Name Beautifier",
@@ -109,22 +119,35 @@
                         - font weight<br>
                         - button color (match the font color)`,
                 projType: "Weekly Web Dev Challenge",
-                projImg: './img/projects/proj-cover-WWDC-NameBeautifier.png'
+                projImg: './img/projects/proj-cover-WWDC-NameBeautifier.png',
+                github: "https://github.com/alanacapcreates/WWDC-NameBeautifier-072521",
+                liveSite: "https://alanacapcreates-wwdc-namebeautifier072521.netlify.app/"
             }
             ]
             function renderCards(filterA){
                 for(let i=0;i<filterA.length;i++){
                     
                     let card = document.createElement('div')
-                    let projInfo = document.createElement('p')
+                    let projInfo = document.createElement('a')
+                    let projGH = document.createElement('a')
+                    let projDeploy = document.createElement('a')
                     let projType = document.createElement('p')
                     let projImg = document.createElement('img')
                     let bottomCard = document.createElement('div')
                     // projImg.src='https://via.placeholder.com/314x262.png'
-                    projInfo.innerHTML=`<a><i class="fas fa-info-circle fa-2x"></i></a>`
+                    projInfo.innerHTML=`<a><i class="fas fa-info-circle"></i></a>`
+                    projGH.innerHTML=`<a><i class="fab fa-github"></i></a>`
+                    projDeploy.innerHTML=`<a><i class="fas fa-globe"></i></a>`
+
+                    projGH.addEventListener("click",() => {projGH.setAttribute("href",filterA[i].github)})
+                    projDeploy.addEventListener("click",() => {projDeploy.setAttribute("href",filterA[i].liveSite)})
+
+                    projGH.setAttribute("target","blank")
+                    projDeploy.setAttribute("target","blank")
+                    
 
                     projInfo.addEventListener("click",infoclick)
-
+                    bottomCard.classList.add('bottom-card')
                     function infoclick(event){
                         let overlay = document.createElement('div')
                         let overlayText = document.createElement('div')
@@ -141,21 +164,24 @@
                         overlay.classList.add('overlayDiv')
                         
                         card.append(overlay)
-                
-            }
+                    }
 
                         if(filterA[i].projType === "Case Study"){
                             projType.classList.remove()
                             projType.classList.add("proj-typeCS")
+                            bottomCard.append(projType,projInfo)
                         }
                         else if(filterA[i].projType === "Weekly Web Dev Challenge"){
                             projType.classList.remove()
                             projType.classList.add("proj-typeWWDC")
+                            // projGH.setAttribute("href", filterA[i].github)
+                            bottomCard.append(projType,projInfo,projGH,projDeploy)
+                            
                         }
                     projType.innerHTML=`${filterA[i].projType}`
                     projImg.src = filterA[i].projImg
                     card.append(projImg)
-                    bottomCard.append(projType,projInfo)
+                    // bottomCard.append(projType,projInfo)
                     card.append(bottomCard)
                     card.setAttribute("id",i+1)
                     card.classList.add("project-card")
@@ -203,11 +229,7 @@
                     let wwdcFilter = project.filter(activity => (activity.projType.includes("Weekly Web Dev Challenge")))
                     renderCards(wwdcFilter)
                 }
-            }
-            
-            
-            // infoclick(project)
-            
+            }         
         </script>
     </body>
 </html>

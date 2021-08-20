@@ -397,6 +397,10 @@ form textarea{
     border: 1px solid var(--ACCBlue);
     border-radius: 30px;
 }
+
+.bottom-card{
+    font-size: 24px;
+}
 .overlayDiv{
     position: absolute;
     top: 0;
