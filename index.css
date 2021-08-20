@@ -363,6 +363,7 @@ form textarea{
     margin:175px 0;
 }
 .project-card{
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 360px;
@@ -372,7 +373,8 @@ form textarea{
     padding: 24px;
     /* flex-basis: 33.333333%; */
 }
-.project-card div{
+.project-card > div{
+    /* position: relative; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -394,6 +396,14 @@ form textarea{
     padding: 8px 18px;
     border: 1px solid var(--ACCBlue);
     border-radius: 30px;
+}
+.overlayDiv{
+    position: absolute;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.83);
+    color: white;
+    width: 360px;
+    height: 360px;
 }
 /* TYPOGRAPHY */
 h2{

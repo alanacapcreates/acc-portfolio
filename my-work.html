@@ -37,6 +37,9 @@
 
         </div> <!-- END OF CONTAINER -->
         <script>
+
+            
+
             let allProj = document.getElementById("allProj")
             let caseStudyProj = document.getElementById("caseStudyProj")
             let wwdcProj = document.getElementById("wwdcProj")
@@ -99,6 +102,19 @@
                     let bottomCard = document.createElement('div')
                     // projImg.src='https://via.placeholder.com/314x262.png'
                     projInfo.innerHTML=`<a><i class="fas fa-info-circle fa-2x"></i></a>`
+
+                    projInfo.addEventListener("click",infoclick)
+
+                    function infoclick(event){
+                let overlay = document.createElement('div')
+                let overlayText = document.createElement('div')
+                    overlayText.innerHTML = `${filterA[i].name}`
+                    overlay.append(overlayText)
+                    overlay.classList.add('overlayDiv')
+                    cardSection.append(overlay)
+                
+            }
+
                         if(filterA[i].projType === "Case Study"){
                             projType.classList.remove()
                             projType.classList.add("proj-typeCS")
@@ -112,6 +128,7 @@
                     card.append(projImg)
                     bottomCard.append(projType,projInfo)
                     card.append(bottomCard)
+                    card.setAttribute("id",i+1)
                     card.classList.add("project-card")
                     cardSection.append(card)
                 }
@@ -158,7 +175,9 @@
                     renderCards(wwdcFilter)
                 }
             }
-
+            
+            
+            // infoclick(project)
             
         </script>
     </body>
