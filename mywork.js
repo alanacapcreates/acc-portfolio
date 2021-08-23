@@ -18,10 +18,12 @@ let allProj = document.getElementById("allProj")
             },
             {
                 name: "Ketcham Medicine Cabinets: Upgraded Curb Appeal",
+                idN: 2,
                 date: "September 2020 - December 2020" ,
                 projDesc: "Now that Ketcham has a new brand identity, the next step is to match that aesthetic with an updated website. Read on to see my process in giving ketchamcabinets.com a modern makeover.",
                 projType: "Case Study",
-                projImg: './img/projects/proj-cover-KMCSite.png'
+                projImg: './img/projects/proj-cover-KMCSite.png',
+                liveSite: 'https://www.ketchamcabinets.com/'
             },
             {
                 name: "Tip Calculator",
@@ -92,7 +94,8 @@ let allProj = document.getElementById("allProj")
                     let projType = document.createElement('p')
                     let projImg = document.createElement('img')
                     let bottomCard = document.createElement('div')
-                    // projImg.src='https://via.placeholder.com/314x262.png'
+                    let bottomCardIcons = document.createElement('div')
+
                     projInfo.innerHTML=`<a><i class="fas fa-info-circle"></i></a>`
                     projGH.innerHTML=`<a><i class="fab fa-github"></i></a>`
                     projDeploy.innerHTML=`<a><i class="fas fa-globe"></i></a>`
@@ -106,6 +109,7 @@ let allProj = document.getElementById("allProj")
 
                     projInfo.addEventListener("click",infoclick)
                     bottomCard.classList.add('bottom-card')
+                    bottomCardIcons.classList.add('bottom-card-icons')
                     function infoclick(event){
                         let overlay = document.createElement('div')
                         let overlayText = document.createElement('div')
@@ -127,24 +131,29 @@ let allProj = document.getElementById("allProj")
                         if(filterA[i].projType === "Case Study"){
                             projType.classList.remove()
                             projType.classList.add("proj-typeCS")
-                            bottomCard.append(projType,projInfo)
+                            bottomCard.append(projType)
+                            bottomCardIcons.append(projInfo)
+                            if(filterA[i].idN === 2){
+                                bottomCard.append(projType)
+                                bottomCardIcons.append(projInfo,projDeploy)
+                            }
                         }
                         else if(filterA[i].projType === "Weekly Web Dev Challenge"){
                             projType.classList.remove()
                             projType.classList.add("proj-typeWWDC")
-                            // projGH.setAttribute("href", filterA[i].github)
-                            bottomCard.append(projType,projInfo,projGH,projDeploy)
+                            bottomCard.append(projType)
+                            bottomCardIcons.append(projInfo,projGH,projDeploy)
                             
                         }
+                        bottomCard.append(bottomCardIcons)
                     projType.innerHTML=`${filterA[i].projType}`
                     projImg.src = filterA[i].projImg
                     card.append(projImg)
-                    // bottomCard.append(projType,projInfo)
                     card.append(bottomCard)
                     card.setAttribute("id",i+1)
                     card.classList.add("project-card")
                     cardSection.append(card)
-                }
+                }//END INFOCLICK FunCTION
             }
 
             function displayProj(){

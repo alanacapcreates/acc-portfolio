@@ -401,6 +401,9 @@ form textarea{
 .bottom-card{
     font-size: 24px;
 }
+.bottom-card-icons a{
+    margin-left:2px;
+}
 .overlayDiv{
     position: absolute;
     top: 0;
