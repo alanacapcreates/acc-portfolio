@@ -399,10 +399,16 @@ form textarea{
 }
 
 .bottom-card{
-    font-size: 24px;
+    font-size: 22px;
+}
+.bottom-card-icons{
+    font-family: 'Material Icons Outlined';
 }
 .bottom-card-icons a{
     margin-left:2px;
+}
+.svg-inline--fa{
+    vertical-align: 0;
 }
 .overlayDiv{
     position: absolute;

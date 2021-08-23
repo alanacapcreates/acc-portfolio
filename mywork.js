@@ -97,10 +97,12 @@
                     let projImg = document.createElement('img')
                     let bottomCard = document.createElement('div')
                     let bottomCardIcons = document.createElement('div')
-
-                    projInfo.innerHTML=`<a><i class="fas fa-info-circle"></i></a>`
-                    projGH.innerHTML=`<a><i class="fab fa-github"></i></a>`
-                    projDeploy.innerHTML=`<a><i class="fas fa-globe"></i></a>`
+                    // projInfo.innerHTML=`<a><i class="fas fa-info-circle"></i></a>`
+                    projInfo.innerHTML=`<span class="material-icons-outlined">
+                    info</span>`
+                    projGH.innerHTML=`<i class="fab fa-github"></i>`
+                    projDeploy.innerHTML=`<span class="material-icons-outlined">
+                    language</span>`
 
                     projGH.addEventListener("click",() => {projGH.setAttribute("href",filterA[i].github)})
                     projDeploy.addEventListener("click",() => {projDeploy.setAttribute("href",filterA[i].liveSite)})
