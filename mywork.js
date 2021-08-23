@@ -1,14 +1,12 @@
-let allProj = document.getElementById("allProj")
+            let allProj = document.getElementById("allProj")
             let caseStudyProj = document.getElementById("caseStudyProj")
             let wwdcProj = document.getElementById("wwdcProj")
 
-            
             allProj.addEventListener("click", displayProj)
             caseStudyProj.addEventListener("click", displayProj)
             wwdcProj.addEventListener("click", displayProj)
-
             let cardSection = document.getElementById("projects");
-
+           
             let project =[{
                 name: "Ketcham Medicine Cabinets: Rebranding in 2021",
                 date: "September 2020 - December 2020",
@@ -84,6 +82,10 @@ let allProj = document.getElementById("allProj")
                 liveSite: "https://alanacapcreates-wwdc-namebeautifier072521.netlify.app/"
             }
             ]
+            //default state on load
+            renderCards(project)
+            allProj.classList.add("proj-all-btn-active")
+
             function renderCards(filterA){
                 for(let i=0;i<filterA.length;i++){
                     
@@ -155,10 +157,9 @@ let allProj = document.getElementById("allProj")
                     cardSection.append(card)
                 }//END INFOCLICK FunCTION
             }
-
-            function displayProj(){
+            function displayProj(e){
                 cardSection.innerHTML = ""
-                if(event.target.id ==="allProj"){
+                if(e.target.id ==="allProj"){
                     allProj.classList.remove("proj-all-btn")
                     allProj.classList.add("proj-all-btn-active")
 
@@ -170,7 +171,7 @@ let allProj = document.getElementById("allProj")
 
                     renderCards(project)
                 }
-                else if(event.target.id ==="caseStudyProj"){
+                else if(e.target.id ==="caseStudyProj"){
                     allProj.classList.remove("proj-all-btn-active")
                     allProj.classList.add("proj-all-btn")
 
@@ -183,7 +184,7 @@ let allProj = document.getElementById("allProj")
                     let caseStudyFilter = project.filter(activity => (activity.projType.includes("Case Study")))
                     renderCards(caseStudyFilter)
                 }
-                else if(event.target.id ==="wwdcProj"){
+                else if(e.target.id ==="wwdcProj"){
                     allProj.classList.remove("proj-all-btn-active")
                     allProj.classList.add("proj-all-btn")
 
