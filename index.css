@@ -53,6 +53,15 @@ a:hover{
     color: var(--ACCMain);
     cursor: pointer;
 }
+
+.active{
+    font-weight: 600;
+}
+a.active::after{
+    content: '';
+    display: block;
+    border: 1px solid #000;
+}
 /* FOOTER */
 footer{
     display: flex;
