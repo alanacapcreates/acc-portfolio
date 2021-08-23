@@ -196,6 +196,7 @@ footer p{
     background: var(--ACCgradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    cursor: pointer;
 }
 .gradient-text{
     background: var(--ACCgradient);
