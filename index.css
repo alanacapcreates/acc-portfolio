@@ -72,7 +72,7 @@ footer p{
 .container{
     display: flex;
     flex-direction: column;
-    margin-top:180px;
+    margin-top:100px;
     align-items: center;
     justify-content: center;
     width: 100%;
