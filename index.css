@@ -481,6 +481,9 @@ form textarea{
     width: 360px;
     height: 360px;
 }
+.overlayDiv ul{
+    padding-left: 20px;
+}
 .close-btn{
     position: absolute;
     top: 2%;

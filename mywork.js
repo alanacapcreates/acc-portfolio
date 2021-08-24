@@ -71,11 +71,13 @@
             {
                 name: "Name Beautifier",
                 date: "July 25, 2021",
-                projDesc: `When the button is clicked, the following things should change:<br><br>
-                        - font family (use array given)<br>
-                        - font color (either use randomcolor or your own array of colors)<br>
-                        - font weight<br>
-                        - button color (match the font color)`,
+                projDesc: `When the button is clicked, the following things should change:
+                        <ul>
+                        <li> font family (use array given)</li>
+                        <li> font color (either use randomcolor or your own array of colors)</li>
+                        <li> font weight</li>
+                        <li> button color (match the font color)</li></ul>`
+                        ,
                 projType: "Weekly Web Dev Challenge",
                 projImg: './img/projects/proj-cover-WWDC-NameBeautifier.png',
                 github: "https://github.com/alanacapcreates/WWDC-NameBeautifier-072521",
