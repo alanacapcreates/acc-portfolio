@@ -86,6 +86,7 @@
             ]
             //default state on load
             renderCards(project)
+            allProj.classList.remove("proj-all-btn")
             allProj.classList.add("proj-all-btn-active")
 
             function renderCards(filterA){
