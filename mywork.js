@@ -10,7 +10,7 @@
             let project =[{
                 name: "Ketcham Medicine Cabinets: Rebranding in 2021",
                 date: "September 2020 - December 2020",
-                projDesc: "KMC sought out to create a new brand identity that would increase sales, match their new modern aesthetic, and appeal to a wider + more luxury clientele. Read on to explore my process in creating their new logo.",
+                projDesc: `KMC sought out to create a new brand identity that would increase sales, match their new modern aesthetic, and appeal to a wider + more luxury clientele. <a href="./kmc-rebrand.html">Read on</a> to explore my process in creating their new logo.`,
                 projType: "Case Study",
                 projImg: './img/projects/proj-cover-KMCLogo.png'
             },
@@ -18,7 +18,7 @@
                 name: "Ketcham Medicine Cabinets: Upgraded Curb Appeal",
                 idN: 2,
                 date: "September 2020 - December 2020" ,
-                projDesc: "Now that Ketcham has a new brand identity, the next step is to match that aesthetic with an updated website. Read on to see my process in giving ketchamcabinets.com a modern makeover.",
+                projDesc: `Now that Ketcham has a new brand identity, the next step is to match that aesthetic with an updated website. <a href="./kmc-site-design.html">Read on</a> to see my process in giving ketchamcabinets.com a modern makeover.`,
                 projType: "Case Study",
                 projImg: './img/projects/proj-cover-KMCSite.png',
                 liveSite: 'https://www.ketchamcabinets.com/'
@@ -117,13 +117,25 @@
                     function infoclick(event){
                         let overlay = document.createElement('div')
                         let overlayText = document.createElement('div')
+                            let projName = document.createElement('p')
+                            projName.classList.add('projName')
+                            projName.innerHTML=`${filterA[i].name}`
+
+                            let projDate = document.createElement('p')
+                            projDate.classList.add('projDate')
+                            projDate.innerHTML=`${filterA[i].date}`
+
+                            let projDesc = document.createElement('p')
+                            projDesc.classList.add('projDesc')
+                            projDesc.innerHTML=`${filterA[i].projDesc}`
+
                         let closeBtn = document.createElement('div')
 
                         closeBtn.classList.add('close-btn')
                         closeBtn.innerHTML = `<i class="fas fa-times fa-lg"></i>`
 
                         closeBtn.addEventListener("click", ()=>{overlay.style.display="none"})       
-                        overlayText.innerHTML = `${filterA[i].name} <br><br> ${filterA[i].date}<br><br> ${filterA[i].projDesc}`
+                        overlayText.append(projName,projDate,projDesc)
 
                         overlay.append(overlayText)
                         overlay.append(closeBtn)

@@ -10,6 +10,9 @@
     margin:0;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     font-family: 'Kulim Park', sans-serif;
     font-weight: 400;
@@ -403,6 +406,12 @@ form textarea{
     justify-content: center;
     margin:175px 0;
 }
+.projects .overlayDiv a{
+    color: var(--ACCMain);
+}
+.projects .overlayDiv a:hover{
+    color: #fff;
+}
 .project-card{
     position: relative;
     display: flex;
@@ -422,21 +431,31 @@ form textarea{
     margin-top: auto;
     align-items: center;
 }
-.project-card p{
-    font-size: 14px;
+.projName{
+    font-size: 24px;
+    font-weight: 700;
+}
+.projDesc{
+    font-size: 18px;
+}
+.projDate{
+    margin: 20px 0;
+    font-size: 18px;
 }
 .project-card a{
     cursor: pointer;
 }
-.proj-typeCS{
-     padding: 8px 18px;
-     border: 1px solid var(--ACCPink);
-     border-radius: 30px;
-}
+.proj-typeCS,
 .proj-typeWWDC{
     padding: 8px 18px;
-    border: 1px solid var(--ACCBlue);
     border-radius: 30px;
+    font-size: 14px;
+}
+.proj-typeCS{ 
+     border: 1px solid var(--ACCPink);
+}
+.proj-typeWWDC{
+    border: 1px solid var(--ACCBlue);
 }
 
 .bottom-card{
