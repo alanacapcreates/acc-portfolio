@@ -363,7 +363,9 @@ form textarea{
 #caseStudyProj:hover,
 #wwdcProj:hover{
     transform: scale(1.1);
-    color: black;
+    color: #000;
+    border: 1px solid #000;
+    background-color: #fff;
 }
 .filter-btn:nth-of-type(1){
     margin-top:30px;
@@ -375,27 +377,27 @@ form textarea{
 }
 .proj-all-btn-active{
     background-color: var(--ACCGreen);
-    color: white;
+    color: #fff;
 }
 .proj-all-btn{
     border: 1px solid var(--ACCGreen);
-    color: black;
+    color: #000;
 }
 .proj-cs-btn-active{
     background-color: var(--ACCPink);
-    color: white;
+    color: #fff;
 }
 .proj-cs-btn{
     border: 1px solid var(--ACCPink);
-    color: black;
+    color: #000;
 }
 .proj-wwdc-btn{
     border: 1px solid var(--ACCBlue);
-    color: black;
+    color: #000;
 }
 .proj-wwdc-btn-active{
     background-color: var(--ACCBlue);
-    color: white;
+    color: #fff;
 }
 .projects{
     display: flex;
@@ -477,7 +479,7 @@ form textarea{
     display: inline-block;
     padding: 30px;
     background-color: rgba(0, 0, 0, 0.863);
-    color: white;
+    color: #fff;
     width: 360px;
     height: 360px;
 }
