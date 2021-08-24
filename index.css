@@ -27,7 +27,6 @@ nav{
     top:0;
     z-index: 10;
     padding: 10px 0;
-    width: 100vw;
     font-size: 22px;
     transition: all .2s ease-in 0s;
     background-color: white;
