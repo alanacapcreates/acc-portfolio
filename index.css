@@ -495,6 +495,41 @@ form textarea{
 .close-btn:hover{
     cursor: pointer;
 }
+#kmc-final-design .card{
+    display: inline-block;
+    border-radius: 10px;
+    background-color: white;
+    width:360px;
+    height:360px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
+}
+.case-study-container{
+    padding:0 75px;
+}
+.horizontal-flex{
+    display: flex;
+    flex-direction: row;
+}
+.horizontal-flex > div{
+    width: 50%;
+}
+.div-bg-img{
+    background-image: url("./img/kmc-rebrand/pexels-tima-miroshnichenko-6615234.jpg");
+    background-color: #cccccc;
+    height: 350px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+}
+.card{
+    /* display: inline-block; */
+    border-radius: 10px;  
+    border: none;
+    background-color: white;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
+}
 /* TYPOGRAPHY */
 h2{
     font-size: 36px;
