@@ -130,9 +130,7 @@ footer p{
     width: 50%;
     line-height: 125%;
 }
-.lw-text p:first-of-type{
-    margin-top: 15px;
-}
+
 .lw-text p:last-of-type{
     margin-top: 30px;
 }
@@ -514,17 +512,30 @@ form textarea{
     width: 50%;
 }
 .div-bg-img{
-    background-image: url("./img/kmc-rebrand/pexels-tima-miroshnichenko-6615234.jpg");
     background-color: #cccccc;
     height: 350px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-
+    margin: 24px 0;
+}
+.div-bg-img-contain{
+    background-color: #fff;
+    height: 350px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    margin: 24px 0;
+}
+#final-design{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 .card{
-    /* display: inline-block; */
     border-radius: 10px;  
     border: none;
     background-color: white;
@@ -536,6 +547,7 @@ h2{
 }
 h3{
     font-size: 24px;
+    margin-bottom: 24px;
 }
 em{
     font-style: italic;
