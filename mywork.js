@@ -82,6 +82,22 @@
                 projImg: './img/projects/proj-cover-WWDC-NameBeautifier.png',
                 github: "https://github.com/alanacapcreates/WWDC-NameBeautifier-072521",
                 liveSite: "https://alanacapcreates-wwdc-namebeautifier072521.netlify.app/"
+            },
+            {
+                name: "Theme Changer",
+                date: "November 22, 2021",
+                projDesc: `Manipulate the toggle switch to change the following:
+                        <ul>
+                        <li> Header</li>
+                        <li> H1</li>
+                        <li> Card Background + Text Color</li>
+                        <li> Button Background + Text Color</li>
+                        <li> Toggle Colors</li></ul>`
+                        ,
+                projType: "Weekly Web Dev Challenge",
+                projImg: './img/projects/proj-cover-WWDC-ThemeChanger.png',
+                github: "https://github.com/alanacapcreates/WWDC-ThemeChanger-111521",
+                liveSite: "https://alanacapcreates-wwdc-themechanger.netlify.app/"
             }
             ]
             //default state on load
