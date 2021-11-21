@@ -95,7 +95,7 @@
                         <li> Toggle Colors</li></ul>`
                         ,
                 projType: "Weekly Web Dev Challenge",
-                projImg: './img/projects/proj-cover-WWDC-ThemeChanger.png',
+                projImg: './img/projects/proj-cover-WWDC-ThemeChanger3.png',
                 github: "https://github.com/alanacapcreates/WWDC-ThemeChanger-111521",
                 liveSite: "https://alanacapcreates-wwdc-themechanger.netlify.app/"
             }
