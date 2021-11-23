@@ -118,14 +118,25 @@ footer p{
     margin-bottom: 80px;
     text-align: center;
 }
+.latest-work{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .latest-work-card{
     display: flex;
-    height: 550px;
-    padding: 0 20px;
-    justify-content: center;
+    width: 75%;
+    padding: 20px;
+    justify-content: space-between;
     margin-bottom: 120px;
 }
-
+.lw-img img{
+    /* width: 100%; */
+    max-height: 350px;
+    /* align-self: flex-end; */
+    
+}
 .lw-text{
     width: 50%;
     line-height: 125%;
