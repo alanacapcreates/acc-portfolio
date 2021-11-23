@@ -98,6 +98,13 @@
                 projImg: './img/projects/proj-cover-WWDC-ThemeChanger4.png',
                 github: "https://github.com/alanacapcreates/WWDC-ThemeChanger-111521",
                 liveSite: "https://alanacapcreates-wwdc-themechanger.netlify.app/"
+            },
+            {
+                name: "FlexFly",
+                date: "July 2021 - October 2021",
+                projDesc: `Between flight delays, hidden fees, and all the stress in between, it can be hard to stay calm and collected throughout the entire traveling process. To mitigate the stress, FlexFly is a tool that breaks down communication barriers and informs the user of any delays, important security protocols, and more.`,
+                projType: "Case Study",
+                projImg: './img/flexfly/FlexFly-CoverImage.png'
             }
             ]
             //default state on load
