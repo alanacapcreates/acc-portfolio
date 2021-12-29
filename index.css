@@ -515,7 +515,7 @@ form textarea{
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
 }
 .case-study-container{
-    padding:0 32px;
+    padding:0 8em;
 }
 .horizontal-flex{
     display: flex;
@@ -568,6 +568,12 @@ h3{
 }
 em{
     font-style: italic;
+}
+ul { 
+    padding:0;margin-left: 1.2em;
+}
+ul li{
+    margin-bottom: .5em;
 }
 .bold{
     font-weight: 600;
