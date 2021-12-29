@@ -515,11 +515,12 @@ form textarea{
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
 }
 .case-study-container{
-    padding:0 75px;
+    padding:0 32px;
 }
 .horizontal-flex{
     display: flex;
     flex-direction: row;
+    gap: 1.5em;
 }
 .horizontal-flex > div{
     width: 50%;
@@ -555,11 +556,14 @@ form textarea{
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
 }
 /* TYPOGRAPHY */
+h1{
+    font-size: 2.5em;
+}
 h2{
-    font-size: 36px;
+    font-size: 1.5em;
 }
 h3{
-    font-size: 24px;
+    font-size: 1.25em;
     margin-bottom: 24px;
 }
 em{
