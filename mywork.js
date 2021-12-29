@@ -104,7 +104,7 @@
                 date: "July 2021 - October 2021",
                 projDesc: `To mitigate the stress of air travel, FlexFly is a tool that breaks down communication barriers and informs the user of delays, important security protocols, and more.`,
                 projType: "Case Study",
-                projImg: './img/flexfly/FlexFly-CoverImage.png'
+                projImg: './img/flexfly/FlexFly-CoverImage2.jpg'
             }
             ]
             //default state on load
