@@ -322,24 +322,30 @@ form textarea{
     margin-top: 60px;
 }
 .code-container{
+    font-family: 'Source Code Pro', monospace;
+    position: relative;
     width: 950px;
     max-height: 725px;
     background-color: #FBFBFB;
     overflow-y: scroll;
-    /* margin-bottom: 175px; */
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px 10px;
 }
 .line-numbers{
-    width: 25px;
-    float: left;
+    position: absolute;
+    left: 0;
+    /* width: 25px; */
+    /* float: left; */
+    margin-left: 5px;
     line-height: 200%;
     color: var(--ACCGrey);
-    margin-right: 25px;
+    font-size: 1em;
 }
 .code{
-    float: left;
     line-height: 200%;
-    font-family: 'Source Code Pro', monospace;
+    /* font-family: 'Source Code Pro', monospace; */
+    font-size: 1em;
+    margin-left: 40px;
 }
 .indent-code{
     margin-left:15%;
@@ -347,10 +353,13 @@ form textarea{
 .code-toolbar{
     position: sticky;
     width: 100%;
+    z-index: 10;
     top:0;
-    background-color: #F8F8F8;
+    /* background-color: #F8F8F8; */
+    background-color: #111111;
     padding: 15px;
     border-bottom: 1px solid #D9D9D9;
+    border-radius: 10px 10px 0 0;
 }
 .circle{
     border-radius: 50%;
