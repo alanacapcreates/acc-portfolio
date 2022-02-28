@@ -558,16 +558,28 @@ form textarea{
       }
 }
 
-
+th,td{
+    border-bottom: 1px solid #d3d3d3;
+}
 table{
-    width: 50%;
+    width: 100%;
     border-collapse: collapse;
-    border: 1px solid var(--ACCGrey);
+    font-size: 1em;
+    text-align: left;
 }
 th{
+    padding: 1em 1em 1em .2em;
     color: var(--ACCGrey);
 }
 
+td{
+    padding: 5px;
+    height: 2em;
+    vertical-align: middle;
+}
+td:nth-child(odd){
+    width: 30%;
+}
 .div-bg-img{
     background-color: #cccccc;
     height: 350px;
