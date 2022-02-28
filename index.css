@@ -528,12 +528,46 @@ form textarea{
 }
 .horizontal-flex{
     display: flex;
-    flex-direction: row;
-    gap: 1.5em;
+    flex-flow: row wrap;
+    /* gap: 1.5em; */
 }
-.horizontal-flex > div{
+
+
+@media screen and (max-width: 600px) {
+    .horizontal-flex {
+        gap: 0em;
+      }
+    .horizontal-flex-third > div{
+        width: 350px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .horizontal-flex {
+        gap: 1.5em;
+      }
+      .horizontal-flex-third > div{
+          width: 350px;
+      }
+}
+@media screen and (min-width: 901px) {
+    .horizontal-flex {
+        gap: 1.5em;
+      }
+      .horizontal-flex-third > div{
+          width: 500px;
+      }
+}
+
+
+table{
     width: 50%;
+    border-collapse: collapse;
+    border: 1px solid var(--ACCGrey);
 }
+th{
+    color: var(--ACCGrey);
+}
+
 .div-bg-img{
     background-color: #cccccc;
     height: 350px;
