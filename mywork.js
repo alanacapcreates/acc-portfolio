@@ -10,7 +10,7 @@
             let project =[{
                 name: "Ketcham Medicine Cabinets: Rebranding in 2021",
                 date: "September 2020 - December 2020",
-                projDesc: `KMC sought out to create a new brand identity that would increase sales, match their new modern aesthetic, and appeal to a wider + more luxury clientele. <a href="./design-inprogress.html">Read on</a> to explore my process in creating their new logo.`,
+                projDesc: `KMC sought out to create a new brand identity that would increase sales, match their new modern aesthetic, and appeal to a wider + more luxury clientele. <a href="./kmc-rebrand.html">Read on</a> to explore my process in creating their new logo.`,
                 projType: "Case Study",
                 projImg: './img/projects/proj-cover-KMCLogo.png'
             },
