@@ -20,9 +20,10 @@ body{
 }
 
 /* NAV */
-nav{
+
+@media screen and (min-width: 800px) {
+    nav{
     display: flex;
-    flex-wrap: wrap;
     position: sticky;
     top:0;
     z-index: 10;
@@ -42,6 +43,8 @@ nav a{
     margin-right: 50px;
     text-align: center;
 }
+}
+
 /* LINKS */
 a{
     transition: all 0.3s ease-out;
@@ -58,12 +61,13 @@ a:hover{
 
 .active{
     font-weight: 600;
+    text-decoration: underline;
 }
-a.active::after{
+/* a.active::after{
     content: '';
     display: block;
     border: 1px solid #000;
-}
+} */
 /* FOOTER */
 footer{
     display: flex;
@@ -575,6 +579,47 @@ form textarea{
       }
       .horizontal-flex-third > div{
           width: 500px;
+      }
+}
+
+@media screen and (max-width: 799px) {
+    nav{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: sticky;
+        top:0;
+        z-index: 10;
+        padding: 10px 0;
+        font-size: 22px;
+        transition: all .2s ease-in 0s;
+        background-color: white;
+        justify-content: center;
+        box-shadow: 2px 2px 20px 5px #e2e2e2;
+    }
+    nav img{
+        display: block;
+        align-self: center;
+        margin: 0;
+        margin-bottom: .5em;
+        width: 60px;
+    }
+    nav a{
+        text-decoration: none;
+        display: block;
+        padding: 15px 25px;
+        margin: 0;
+        margin-bottom: .25em;
+        text-align: center;
+    }
+
+    nav .gradient-btn {
+        display: block;
+        margin: 0 auto;
+        padding:15px 40px;
+        background-color: #FFF;
+        border: none;
+        text-decoration: none;
       }
 }
 
