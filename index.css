@@ -89,6 +89,7 @@ footer p{
     display: flex;
     flex-direction: column;
     margin-top:100px;
+    padding: 0 1.5em 0 1.5em;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -130,9 +131,9 @@ footer p{
 }
 .latest-work-card{
     display: flex;
-    width: 75%;
+    width: 100%;
     padding: 20px;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-bottom: 120px;
 }
 
@@ -145,6 +146,7 @@ footer p{
 .lw-text{
     width: 50%;
     line-height: 125%;
+    margin-right: .5em;
 }
 
 .lw-text p:last-of-type{
