@@ -1,5 +1,5 @@
 :root{
-    --ACCgradient: linear-gradient(90deg, rgba(28,34,107,1) 0%, rgba(0,246,238,1) 100%);
+    --ACCgradient: linear-gradient(90deg, #1c226b 0%, rgba(0,246,238,1) 100%);
     --ACCMain: #00F6EE;
     --ACCPink: #FF006F;
     --ACCBlue: #0500FF;
@@ -596,6 +596,11 @@ form textarea{
           width: 350px;
       }
 }
+
+#wwdc{
+    margin-bottom: 4em;
+}
+
 @media screen and (min-width: 901px) {
     .horizontal-flex {
         gap: 1.5em;
@@ -603,12 +608,90 @@ form textarea{
       .horizontal-flex-third > div{
           width: 500px;
       }
+      .work{
+          margin: 3em 0em 0em;
+          display: flex;
+      }
+      .work main{
+          width: 75%;
+          max-width: 950px;
+      }
+      .work-tile{
+          position: relative;
+          padding: 1em;
+          margin-bottom: 2em;
+          display: flex;
+          flex-direction: row;
+          width: 100%;
+          max-width: 750px;
+      }
+      #wwdc::before,
+      #UXcs::before {
+        content: '';
+        display: block;
+        height:      105px;
+        margin-top: -105px;
+        visibility: hidden;
+      }
+
+
+      /* TOP GRADIENT */
+      .work-tile::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: -2px;
+        width: 10%;
+        height: 2px;
+        border-style: solid;
+          border-width: 2px;
+          border-image: linear-gradient(to right, #1c226b, var(--ACCMain)) 1;
+          border-right: none;
+          border-left: none;
+          border-bottom: none;
+    }
+
+    /* LEFT GRADIENT */
+      .work-tile::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 20%;
+        border-style: solid;
+          border-width: 2px;
+          border-image: linear-gradient(to bottom, #1c226b, var(--ACCMain)) 1;
+          border-top:none;
+          border-right: none;
+          border-bottom: none;
+    }
+
+      .work-tile img{
+          width: 25%;
+          object-fit: contain;
+          margin-right: .5em;
+      }
+      
+      .side-nav{
+          position: sticky;
+          top:15%;
+          padding: 2em;
+          display: flex;
+          flex-direction: column;
+          min-width: 20%;
+          height: 25vh;
+      }
+      .side-nav a{
+          margin: 1em 0;
+      }
 }
 
-@media screen and (max-width: 799px) {
-    nav{
+@media screen and (max-width: 900px) {
+
+
+     nav{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         width: 100%;
         position: sticky;
         top:0;
@@ -621,29 +704,75 @@ form textarea{
         box-shadow: 2px 2px 20px 5px #e2e2e2;
     }
     nav img{
-        display: block;
+        /* display: block; */
         align-self: center;
-        margin: 0;
-        margin-bottom: .5em;
+        margin: 0 25px;
+        /* margin-bottom: .5em; */
         width: 60px;
     }
-    nav a{
+   nav a{
         text-decoration: none;
         display: block;
         padding: 15px 25px;
         margin: 0;
-        margin-bottom: .25em;
+        /* margin-bottom: .25em; */
         text-align: center;
     }
 
     nav .gradient-btn {
         display: block;
-        margin: 0 auto;
+        width: fit-content;
+        right:10%;
         padding:15px 40px;
         background-color: #FFF;
         border: none;
         text-decoration: none;
       }
+
+      .side-nav{
+        position: sticky;
+        top:33%;
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+        min-width: 10%;
+        height: 25vh;
+        /* box-shadow: 3px 0px 10px #d3d3d3; */
+    }
+    .side-nav a{
+        margin: 1em 0;
+    }
+    .work {
+        display: flex;
+        flex-direction: row;
+    }
+    .work-tile{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 1.5em;
+    }
+    .work-tile img{
+        margin-right: 1.5em;
+        width: 20%;
+    }
+
+    #wwdc::before{
+        content: '';
+        display: block;
+        height:      130px;
+        margin-top: -130px;
+        visibility: hidden;
+    }
+    #UXcs::before {
+        content: '';
+        display: block;
+        height:      105px;
+        margin-top: -105px;
+        visibility: hidden;
+      }
+
+     
 }
 
 th,td{
