@@ -43,6 +43,15 @@ nav a{
     margin-right: 50px;
     text-align: center;
 }
+
+.nav-mobile{
+    display: none;
+    visibility: hidden;
+}
+#myModal, .modal{
+    display: none;
+    visibility: hidden;
+}
 }
 
 /* LINKS */
@@ -539,11 +548,7 @@ form textarea{
     max-height: 400px;
     object-fit: cover;
 }
-@media screen and (max-width: 799px) {
-    .banner{
-        max-height: 320px;
-    }
-}
+
 .img{
     margin:50px 0;
     display: block;
@@ -565,6 +570,9 @@ form textarea{
 }
 
 @media screen and (max-width: 799px) {
+    .banner{
+        max-height: 320px;
+    }
     .latest-work-card{
         flex-direction: column;
         width: 100%;
@@ -577,7 +585,118 @@ form textarea{
     .latest-work-card .btn{
         margin-top: 2em;
     }
+    
+    nav{
+        visibility: hidden;
+        display: none;
+    }
+    .nav-mobile{
+        width: 100%;
+        visibility: visible;
+        display: flex;
+        justify-content: flex-end;
+        position: sticky;
+        top:0;
+        z-index: 10;
+        padding: 10px 0;
+        font-size: 22px;
+        transition: all .2s ease-in 0s;
+        background-color: white;
+    }
 
+    .nav-mobile a{
+        text-decoration: none;
+        display: block;
+        right: 0;
+        padding: 15px 25px;
+        margin-right: 50px;
+        /* text-align: right; */
+    }
+    .modal{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 20; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    -webkit-animation-name: fadeIn; /* Fade in the background */
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeIn;
+    animation-duration: 0.4s
+    }
+    /* Modal Content */
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    background-color: #fefefe;
+    width: 100%;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s
+  }
+  .modal-content img{
+      margin: 10px 0 25px ;
+      width: 60px;
+      text-align: center;
+  }
+  /* The Close Button */
+  .close {
+    /* padding: 15px 25px; */
+    margin-top: 25px;
+    margin-right: 60px;
+    color: rgb(0, 0, 0);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-header {
+    padding: 2px 16px;
+    /* background-color: #5cb85c; */
+    color: white;
+  }
+  
+  .modal-body {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      font-size: 2em;
+      padding-bottom: 2em;
+    }
+    .modal-body a{
+        display: block;
+        margin: 1em 0;
+    }
+    .modal-body .gradient-btn{
+        margin: 0 auto;
+        margin-top: 1em;
+    }
+  
+  
+  /* Add Animation */
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -588,6 +707,7 @@ form textarea{
         width: 350px;
     }
 }
+
 @media screen and (max-width: 900px) {
     .horizontal-flex {
         gap: 1.5em;
@@ -698,7 +818,7 @@ form textarea{
 
 @media screen and (max-width: 900px) {
 
-
+/*  
      nav{
         display: flex;
         flex-direction: row;
@@ -714,10 +834,10 @@ form textarea{
         box-shadow: 2px 2px 20px 5px #e2e2e2;
     }
     nav img{
-        /* display: block; */
+        
         align-self: center;
         margin: 0 25px;
-        /* margin-bottom: .5em; */
+        
         width: 60px;
     }
    nav a{
@@ -725,7 +845,7 @@ form textarea{
         display: block;
         padding: 15px 25px;
         margin: 0;
-        /* margin-bottom: .25em; */
+       
         text-align: center;
     }
 
@@ -738,7 +858,7 @@ form textarea{
         border: none;
         text-decoration: none;
       }
-
+*/
       .side-nav{
         position: sticky;
         top:33%;
