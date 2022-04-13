@@ -320,6 +320,7 @@ form textarea{
     background: white;
     font-weight: 600;
     color: #000;
+    cursor: pointer;
   }
 .form-success{
     display: flex;
