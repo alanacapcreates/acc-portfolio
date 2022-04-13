@@ -225,9 +225,8 @@ footer p{
        linear-gradient(#fff 0 0);
     -webkit-mask-composite: destination-out; 
     mask-composite: exclude; 
-   
   }
-.gradient-btn:hover::before{
+/* .gradient-btn:hover::before{
     border:5px solid #000;
     border-radius: 30px;
     background: white;
@@ -238,7 +237,7 @@ footer p{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     cursor: pointer;
-}
+} */
 .gradient-text{
     background: var(--ACCgradient);
     background-size: 150%;
@@ -307,13 +306,7 @@ form textarea{
     border-radius: 30px;
     background: white;
 }
-.contact-form button:focus,
-.contact-form button:hover{
-    font-weight: 600;
-    background: var(--ACCgradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+
 .form-success{
     display: flex;
     flex-direction: column;
@@ -701,7 +694,28 @@ form textarea{
         margin-top: 1em;
     }
   
-  
+  .contact-form button{
+    font-family: 'Kulim Park', sans-serif;
+    font-weight: 400;
+    border:2px solid #000;
+    border-radius: 30px;
+    color: #000;
+    font-size: 1em;
+    position:relative;
+    margin-left: auto;
+    padding:15px 40px;
+    background-color: #FFF;
+    text-decoration: none;
+  }
+  .contact-form button:focus,
+  .contact-form button:hover{
+    border:2px solid var(--ACCGreen);
+    border-radius: 30px;
+    background: white;
+    font-weight: 600;
+    color: #000;
+  }
+
   /* Add Animation */
   @-webkit-keyframes fadeIn {
     from {opacity: 0} 
