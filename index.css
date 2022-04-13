@@ -678,6 +678,7 @@ form textarea{
       padding-bottom: 2em;
     }
     .modal-body a{
+        text-decoration: none;
         display: block;
         margin: 1em 0;
     }
