@@ -301,6 +301,19 @@ form textarea{
     border: 3px solid black;
 }
 
+.contact-form button{
+    color: #000;
+    border:5px solid #000;
+    border-radius: 30px;
+    background: white;
+}
+.contact-form button:focus,
+.contact-form button:hover{
+    font-weight: 600;
+    background: var(--ACCgradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .form-success{
     display: flex;
     flex-direction: column;
