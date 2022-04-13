@@ -301,12 +301,26 @@ form textarea{
 }
 
 .contact-form button{
+    font-family: 'Kulim Park', sans-serif;
+    font-weight: 400;
+    border:2px solid #000;
+    border-radius: 30px;
     color: #000;
-    border:5px solid #000;
+    font-size: 1em;
+    position:relative;
+    margin-left: auto;
+    padding:15px 40px;
+    background-color: #FFF;
+    text-decoration: none;
+  }
+  .contact-form button:focus,
+  .contact-form button:hover{
+    border:2px solid var(--ACCGreen);
     border-radius: 30px;
     background: white;
-}
-
+    font-weight: 600;
+    color: #000;
+  }
 .form-success{
     display: flex;
     flex-direction: column;
@@ -694,27 +708,7 @@ form textarea{
         margin-top: 1em;
     }
   
-  .contact-form button{
-    font-family: 'Kulim Park', sans-serif;
-    font-weight: 400;
-    border:2px solid #000;
-    border-radius: 30px;
-    color: #000;
-    font-size: 1em;
-    position:relative;
-    margin-left: auto;
-    padding:15px 40px;
-    background-color: #FFF;
-    text-decoration: none;
-  }
-  .contact-form button:focus,
-  .contact-form button:hover{
-    border:2px solid var(--ACCGreen);
-    border-radius: 30px;
-    background: white;
-    font-weight: 600;
-    color: #000;
-  }
+
 
   /* Add Animation */
   @-webkit-keyframes fadeIn {
