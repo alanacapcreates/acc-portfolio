@@ -248,7 +248,7 @@ footer p{
 .contact{
     display: flex;
     flex-direction: column;
-    margin:120px 0;
+    margin:75px 0;
     width: 100%;
     align-items: center;
 }
