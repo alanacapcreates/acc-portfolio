@@ -106,7 +106,8 @@ footer p{
 }
 .intro{
     display: flex;
-    width: 380px;
+    /* width: 380px; */
+    width: 100%;
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -116,7 +117,7 @@ footer p{
     margin-top: 30px;
 }
 .intro img{
-    width: 302px;
+    max-width: 302px;
 }
 .icons{
     display: flex;
@@ -147,10 +148,8 @@ footer p{
 }
 
 .lw-img img{
-    /* width: 100%; */
+    width: 100%;
     max-height: 350px;
-    /* align-self: flex-end; */
-    
 }
 .lw-text{
     width: 50%;
@@ -603,11 +602,17 @@ form textarea{
     .latest-work-card .lw-img{
         order: -2;
         margin-bottom: 1em;
+        align-self: flex-start;
     }
     .latest-work-card .btn{
         margin-top: 2em;
     }
     
+    .lw-text{
+        width: 100%;
+        margin-right: 0;
+    }
+
     nav{
         visibility: hidden;
         display: none;
@@ -709,7 +714,9 @@ form textarea{
         margin-top: 1em;
     }
   
-
+    footer{
+        text-align: center;
+    }
 
   /* Add Animation */
   @-webkit-keyframes fadeIn {
@@ -843,47 +850,6 @@ form textarea{
 
 @media screen and (max-width: 900px) {
 
-/*  
-     nav{
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        position: sticky;
-        top:0;
-        z-index: 10;
-        padding: 10px 0;
-        font-size: 22px;
-        transition: all .2s ease-in 0s;
-        background-color: white;
-        justify-content: center;
-        box-shadow: 2px 2px 20px 5px #e2e2e2;
-    }
-    nav img{
-        
-        align-self: center;
-        margin: 0 25px;
-        
-        width: 60px;
-    }
-   nav a{
-        text-decoration: none;
-        display: block;
-        padding: 15px 25px;
-        margin: 0;
-       
-        text-align: center;
-    }
-
-    nav .gradient-btn {
-        display: block;
-        width: fit-content;
-        right:10%;
-        padding:15px 40px;
-        background-color: #FFF;
-        border: none;
-        text-decoration: none;
-      }
-*/
       .side-nav{
         position: sticky;
         top:33%;
