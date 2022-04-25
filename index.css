@@ -562,7 +562,20 @@ form textarea{
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
 }
 .case-study-container{
-    padding:0 3em;
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+.painPImg{
+    margin-bottom: 1.5em;
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 2px 2px 8px #d3d3d3;
+}
+.painPoint{
+    width: 100%;
+    margin-bottom: 1em;
 }
 .banner{
     width: 100%;
@@ -919,13 +932,21 @@ td:nth-child(odd){
     width: 30%;
 }
 .div-bg-img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
     background-color: #cccccc;
-    height: 350px;
+    /* height: 350px;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
     position: relative;
+  
     margin: 24px 0;
+}
+.div-bg-img img{
+    /* align */
+    max-height: 350px;
 }
 .div-bg-img-contain{
     background-color: #fff;
