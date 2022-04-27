@@ -874,13 +874,13 @@ hr{
 
       .side-nav{
         position: sticky;
-        top:33%;
-        padding: 1em;
+        top:25%;
+        padding: 1.25em;
         display: flex;
         flex-direction: column;
-        min-width: 10%;
-        height: 25vh;
-        /* box-shadow: 3px 0px 10px #d3d3d3; */
+        min-width: 25%;
+        height: fit-content;
+        margin-right: 2em;
     }
     .side-nav a{
         margin: 1em 0;
@@ -889,15 +889,19 @@ hr{
         display: flex;
         flex-direction: row;
     }
+    .work main{
+        margin-right: 1em;
+    }
     .work-tile{
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-bottom: 1.5em;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 3em;
     }
     .work-tile img{
-        margin-right: 1.5em;
-        width: 20%;
+        margin-bottom: 1em;
+        max-width: 314px;
+        box-shadow: 2px 2px 8px #d3d3d3;
     }
 
     #wwdc::before{
