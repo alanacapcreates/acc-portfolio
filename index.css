@@ -815,6 +815,7 @@ hr{
           width: 100%;
           max-width: 750px;
       }
+      
       #wwdc::before,
       #UXcs::before {
         content: '';
@@ -857,9 +858,9 @@ hr{
     }
 
       .work-tile img{
-          width: 25%;
+          width: 45%;
           object-fit: contain;
-          margin-right: .5em;
+          margin-right: 1em;
       }
       
       .side-nav{
