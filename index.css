@@ -885,9 +885,9 @@ hr{
         padding: 1.25em;
         display: flex;
         flex-direction: column;
-        min-width: 25%;
+        min-width: 20%;
         height: fit-content;
-        margin-right: 2em;
+        margin-right: 1em;
     }
     .side-nav a{
         margin: 1em 0;
