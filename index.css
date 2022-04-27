@@ -890,7 +890,7 @@ hr{
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        padding: 1em 1.75em;
+        padding: .5em 1.75em;
         width: 90%;
         align-items: center;
         justify-content: space-around;
