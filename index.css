@@ -6,6 +6,10 @@
     --ACCGreen: #00BF08;
     --ACCGrey: #7A7A7A;
 }
+@font-face {
+    font-family: BallpenScript;
+    src: url(./fonts/Ballpen.ttf);
+}
 *{
     margin:0;
     box-sizing: border-box;
@@ -112,6 +116,13 @@ footer p{
     align-items: center;
     text-align: center;
     margin-bottom: 175px;
+}
+.side-note{
+    border: 2px solid #242424;
+    border-radius: 10px;
+    padding: 1em 1.5em;
+    margin-top: -3.5em;
+    margin-bottom: 2em;
 }
 .intro p{
     margin-top: 30px;
@@ -518,7 +529,26 @@ form textarea{
 .proj-typeWWDC{
     border: 1px solid var(--ACCBlue);
 }
-
+.overview{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    background-color: #242424;
+    padding: 0 0em 2em 0em;
+}
+.overview-details{
+    position: relative;
+    max-width: 50vw;
+    color: #eeeeee;
+}
+.overview-details p{
+    max-width: 200ch;
+    line-height: 1.6;
+}
+.overview-details .languages p{
+    color: #eeeeee;
+}
 .bottom-card{
     font-size: 22px;
 }
@@ -562,6 +592,7 @@ form textarea{
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
 }
 .case-study-container{
+    position: relative;
     width: 100%;
     max-width: 980px;
     margin: 0 auto;
@@ -569,11 +600,26 @@ form textarea{
 }
 .painPImg{
     margin-bottom: 1.5em;
-    width: 100%;
-    max-width: 700px;
+    /* width: 100%; */
+    object-fit: contain;
+    max-width: 100%;
     box-shadow: 2px 2px 8px #d3d3d3;
+
+}
+.painPointGroup{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.painPoint{
+    margin-bottom: 2em;
+}
+.painPoint p{
+    max-width: 150ch;
 }
 .redesignImg{
+    display: block;
+    margin: 0 auto;
     margin-bottom: 1.5em;
     width: 100%;
     max-width: 700px;
@@ -610,6 +656,19 @@ hr{
     display: flex;
     flex-flow: row wrap;
     /* gap: 1.5em; */
+}
+.languages{
+    margin-top:1em;
+}
+.languages p{
+    display: inline-block;
+    margin: 0em 1em 0 0;
+    font-size: .75em;
+    color: #7A7A7A;
+    border-radius: 3px;
+    border: 1px solid #d3d3d3;
+    padding: 5px 10px;
+    letter-spacing: 1px;
 }
 
 @media screen and (max-width: 799px) {
@@ -814,6 +873,7 @@ hr{
           flex-direction: row;
           width: 100%;
           max-width: 750px;
+          align-self: center;
       }
       
       #wwdc::before,
@@ -914,12 +974,17 @@ hr{
         margin-top: 4em;
     }
     .work main{
+        width: 100%;
         margin: 0 1em;
+        display: flex;
+        flex-direction: column;
     }
     .work-tile{
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        max-width: 600px;
+        margin: 0 auto;
         margin-bottom: 3em;
     }
     .work-tile img{
