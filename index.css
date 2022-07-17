@@ -8,8 +8,10 @@
 }
 @font-face {
     font-family: BallpenScript;
+    
     src: url(./fonts/Ballpen.ttf);
 }
+
 *{
     margin:0;
     box-sizing: border-box;
@@ -356,10 +358,33 @@ form textarea{
     margin-bottom: 25px;
 }
 .bio-section{
-    margin-bottom: 175px;
+    margin-bottom: 75px;
+}
+.bio-section div{
+    text-shadow: 1px 2px 5px #c9c9c9;
+}
+@media screen and (max-width:855px) {
+    .bio-section div{
+        position:absolute;
+        transform: rotate(10deg);
+        font-family: BallpenScript;
+        font-size: 2em;
+        top:5%;
+        left:55%;
+        line-height: 1.2;
+    }
+}
+@media screen and (min-width:856px) {
+    .bio-section div{
+        position:absolute;
+        top:0%;left:55%;
+        transform: rotate(10deg);
+        font-family: BallpenScript;
+        font-size: 2em;
+    }
 }
 .bio{
-    max-width: 950px;
+    max-width: 650px;
 }
 .bio p{
     line-height: 27px;
