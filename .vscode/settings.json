@@ -3,5 +3,5 @@
     "liveServer.settings.CustomBrowser": null,
     "liveServer.settings.donotShowInfoMsg": true,
     "liveServer.settings.wait": 1,
-    "liveServer.settings.useBrowserPreview": true
+    "liveServer.settings.useBrowserPreview": false
 }
