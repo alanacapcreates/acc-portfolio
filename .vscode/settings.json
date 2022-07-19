@@ -2,6 +2,6 @@
     "liveServer.settings.port": 5501,
     "liveServer.settings.CustomBrowser": null,
     "liveServer.settings.donotShowInfoMsg": true,
-    "liveServer.settings.wait": 1,
-    "liveServer.settings.useBrowserPreview": false
+    "liveServer.settings.useBrowserPreview": false,
+    "liveServer.settings.showOnStatusbar": true
 }
