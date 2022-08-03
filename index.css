@@ -362,23 +362,23 @@ form textarea{
 }
 
 @media screen and (max-width:855px) {
-    .bio-section div{
+    .bio-section h2{
         position:absolute;
         transform: rotate(10deg);
         font-family: BallpenScript;
-        font-size: 2em;
-        top:5%;
-        left:55%;
+        font-size: 3em;
+        top:0%;
+        left:50%;
         line-height: 1.2;
     }
 }
 @media screen and (min-width:856px) {
-    .bio-section div{
+    .bio-section h2{
         position:absolute;
         top:0%;left:55%;
         transform: rotate(10deg);
         font-family: BallpenScript;
-        font-size: 2em;
+        font-size: 3em;
     }
 }
 .bio{
