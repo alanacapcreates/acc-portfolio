@@ -414,9 +414,7 @@ form textarea{
     margin-left: 1em;
     color: #000;
 }
-.indent-code{
-    margin-left:15%;
-}
+
 .code-toolbar{
     position: sticky;
     width: 100%;
