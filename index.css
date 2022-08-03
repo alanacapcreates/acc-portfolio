@@ -360,9 +360,7 @@ form textarea{
 .bio-section{
     margin-bottom: 75px;
 }
-.bio-section div{
-    text-shadow: 1px 2px 5px #c9c9c9;
-}
+
 @media screen and (max-width:855px) {
     .bio-section div{
         position:absolute;
@@ -397,6 +395,7 @@ form textarea{
 .code-container{
     font-family: 'Source Code Pro', monospace;
     position: relative;
+    width: 100%;
     max-width: 950px;
     margin: 0 1em 0 1em;
     max-height: 725px;
@@ -405,21 +404,15 @@ form textarea{
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
     border-radius: 10px 10px;
 }
-.line-numbers{
-    position: absolute;
-    left: 0;
-    /* width: 25px; */
-    /* float: left; */
-    margin-left: 5px;
-    line-height: 200%;
+.line-numbers li::marker{
     color: var(--ACCGrey);
     font-size: 1em;
 }
 .code{
     line-height: 200%;
-    /* font-family: 'Source Code Pro', monospace; */
     font-size: 1em;
-    margin-left: 40px;
+    margin-left: 1em;
+    color: #000;
 }
 .indent-code{
     margin-left:15%;
