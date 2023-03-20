@@ -121,7 +121,7 @@ footer p{
     flex-direction: column;
     margin-top:100px;
     padding: 0 4em 0 4em;
-    align-items: left;
+
     justify-content: center;
     width: 100%;
     
@@ -133,8 +133,9 @@ footer p{
     font-weight: 600;
 }
 .intro{
+    align-self: center;
     padding: 75px;
-    max-width: 1140px;
+    max-width: 1040px;
 }
 
 .intro p:not(:first-of-type){
@@ -169,6 +170,7 @@ footer p{
 }
 .section-header{
     margin: 80px 0;
+    align-self: center;
 }
 .latest-work{
     display: flex;
@@ -179,27 +181,34 @@ footer p{
 .latest-work-card{
     display: flex;
     width: 100%;
+    max-width: 1040px;
     padding: 20px;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-bottom: 120px;
 }
-
+.latest-work-card:nth-child(2n-1){
+    align-items: center;
+    justify-items: center;
+}
+.latest-work-card:nth-child(2n){
+    align-items: center;
+}
 .lw-text h3{
     font-family: 'Quintessence';
     font-weight: 400;
 }
 .lw-img img{
+    border-radius: 8px;
     width: 100%;
     max-height: 350px;
+    display: block;
 }
 .lw-text{
-    width: 50%;
     line-height: 125%;
-    margin-right: .5em;
 }
 
 .lw-text p:last-of-type{
-    margin-top: 30px;
+    margin-top: 10px;
 }
 .latest-work-card .btn{
     margin-top: 70px;
@@ -208,7 +217,10 @@ footer p{
     margin-top: 0;
 }
 .btn{
-    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
     font-size: 16px;
     padding: 15px 33px;
     letter-spacing: 0.065em;
@@ -220,23 +232,25 @@ footer p{
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 }
+.btn:focus,
+.btn:hover{
+    border: 2px solid transparent;
+    background-color: black ;
+    color: white;
+}
 
 .btn-glow{
     background: var(--ACCMain);
     box-shadow: 0px 0px 15px 2px rgba(153, 153, 255, 0.8);
-    color: #eeeeee;
+    color: #fefefe;
     border: 2px solid var(--ACCMain);
 }
 .btn-glow:focus,
 .btn-glow:hover{
     box-shadow: none;
     transition: all 0.2s ease-in-out;
-    color: #000;
-}
-.btn:hover{
-    border: 2px solid transparent;
-    background-color: black ;
-    color: white;
+    background-color: #6600ffa9;
+    color: #ffffff;
 }
 .btn-inverse{
     margin-top: 50px;
@@ -1135,15 +1149,14 @@ td:nth-child(odd){
 }
 /* TYPOGRAPHY */
 h1{
-    font-size: 3em;
+    font-size: 3.2em;
 }
 h2{
-    font-size: 2em;
+    font-size: 2.5em;
 }
 h3{
-    font-size: 1.5em;
+    font-size: 1.75em;
     line-height: 32px;
-    margin-bottom: 24px;
 }
 em{
     font-style: italic;
