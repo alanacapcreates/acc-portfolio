@@ -120,7 +120,7 @@ footer p{
     display: flex;
     flex-direction: column;
     margin-top:100px;
-    padding: 0 4em 0 4em;
+    padding: 0 2em;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -162,8 +162,9 @@ footer p{
   }
 
 .logo{
-    width: 100px;
+    width: max-content;
     height: 100px;
+    margin: 10px;
 }
   .row-1 { grid-area: row-1; }
   
@@ -211,6 +212,9 @@ footer p{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    gap: 1rem;
+    flex-wrap: wrap;
+    width: 100%;
 }
 .grid{
     display: grid;
@@ -223,7 +227,6 @@ footer p{
 }
 .flex-row{
     flex-direction: row;
-
 }
 
 div.grid-3col img{
@@ -275,7 +278,7 @@ div.grid-3col .flex{
 }
 
 .neumorphism{
-    padding: 90px 0;
+    padding: 25px;
     border-radius: 20px;
     background: #FFFFFF;
     box-shadow: 6px 6px 19px rgba(0, 0, 0, 0.1);
@@ -323,6 +326,12 @@ div.grid-3col .flex{
     align-items: center;
     justify-items: center;
 }
+.latest-work-card:nth-child(2n-1) .lw-text{
+    margin-left: 2em;
+    
+}
+
+
 .latest-work-card:nth-child(2n){
     align-items: center;
 }
@@ -413,7 +422,7 @@ div.grid-3col .flex{
     border: none;
     text-decoration: none;
   }
-.gradient-btn::before {
+/* .gradient-btn::before {
     content:"";
     position:absolute;
     top:0;
@@ -428,7 +437,7 @@ div.grid-3col .flex{
        linear-gradient(#fff 0 0);
     -webkit-mask-composite: destination-out; 
     mask-composite: exclude; 
-  }
+  } */
 
 
 .contact{
