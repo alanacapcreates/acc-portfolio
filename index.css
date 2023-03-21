@@ -121,10 +121,124 @@ footer p{
     flex-direction: column;
     margin-top:100px;
     padding: 0 4em 0 4em;
-
+    align-items: center;
     justify-content: center;
     width: 100%;
     
+}
+.grid-3col {  display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "col-1 col-2 col-3";
+  }
+
+
+  .col-1 {  display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "row-1"
+      "row-2"
+      "row-3";
+    grid-area: col-1;
+    
+  }
+  
+  .row-1,
+  .row-2,
+  .row-3,
+  .row-4,
+  .row-5,
+  .row-6,
+  .row-7,
+  .row-8,
+  .row-9{
+    gap: 40px;
+  }
+
+.logo{
+    width: 100px;
+    height: 100px;
+}
+  .row-1 { grid-area: row-1; }
+  
+  .row-2 { grid-area: row-2; }
+  
+  .row-3 { grid-area: row-3; }
+  
+  .col-2 {  display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "row-4"
+      "row-5"
+      "row-6";
+    grid-area: col-2;
+  }
+  
+  .row-4 { grid-area: row-4; }
+  
+  .row-5 { grid-area: row-5; }
+  
+  .row-6 { grid-area: row-6; }
+  
+  .col-3 {  display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "row-7"
+      "row-8"
+      "row-9";
+    grid-area: col-3;
+  }
+  
+  .row-7 { grid-area: row-7; }
+  
+  .row-8 { grid-area: row-8; }
+  
+  .row-9 { grid-area: row-9; }
+  
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.grid{
+    display: grid;
+    place-items: center;
+    align-items: center;
+    justify-content: center;
+}
+.flex-col{
+    flex-direction: column;
+}
+.flex-row{
+    flex-direction: row;
+
+}
+
+div.grid-3col img{
+    width: 100%;
+    max-width: 60px;
+    max-height: 68px;
+    
+}
+
+div.grid-3col .flex{
+    gap: 10px;
+}
+
+.txtCenter{
+    text-align: center;
 }
 .uppercase{
     text-transform: uppercase;
@@ -137,19 +251,38 @@ footer p{
     padding: 75px;
     max-width: 1040px;
 }
-
+.icon-title{
+    color: #999999;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: .12em;
+    align-self: end;
+    justify-self: center;
+}
+.block{
+    display: block;
+}
 .intro p:not(:first-of-type){
     margin: 25px 0;
 }
 .intro .btn{
     margin: 30px 30px 0 0;
 }
-.neumorphism{
+.neumorphism-inset{
     border-radius: 20px;
     background: #FFFFFF;
     box-shadow: inset 6px 6px 19px rgba(0, 0, 0, 0.1);
 }
- 
+
+.neumorphism{
+    padding: 90px 0;
+    border-radius: 20px;
+    background: #FFFFFF;
+    box-shadow: 6px 6px 19px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1040px;
+}
+
 .side-note{
     border: 2px solid #242424;
     border-radius: 10px;
