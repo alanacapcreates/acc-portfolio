@@ -434,22 +434,35 @@ form textarea{
     align-items: center;
     justify-content: center;
 }
-.form-success h1{
+.form-success h1,
+.form-success p{
     margin-bottom: 15px;
 }
-.form-success .gradient-btn{
-    display: inline-block;
-    margin-top: 25px;
+.form-success p{
+    font-size: 1.25em;
 }
-.form-submit-img{
-    border-radius: 50%;
-    width: 350px;
-    height: 350px;
-    background: url('./img/memoji-smile.jpg') no-repeat center;
-    background-size: 100%;
-    box-shadow: 2px 2px 8px #d3d3d3;
+.form-success-txt{
+    max-width: 675px;
+}
+.form-submit-img{ 
+    width: 80vw;
+    max-width: 450px;
+    height: auto;
     margin-bottom: 25px;
 }
+.form-submit-img img{
+    max-height: 100%;
+    max-width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .form-success h1{
+        font-size: 2.5em;
+    }
+}
+
+
+
 .bio-section{
     margin-bottom: 75px;
 }
