@@ -82,6 +82,7 @@ a{
     transition: all 0.3s ease-out;
     color: black;
 }
+
 a:visited{
     color: black;
 }
@@ -542,21 +543,28 @@ form textarea{
     }
 }
 .bio{
+    max-width: 753px;
+    text-align: center;
+}
+.bio iframe{
     max-width: 650px;
 }
 .bio p{
-    line-height: 27px;
+    line-height: 26px;
 }
 .bio svg{
     display: block;
     margin: 0 auto;
     margin-top: 60px;
 }
+.bio-code-section{
+    width: 100%;
+}
 .code-container{
     font-family: 'Source Code Pro', monospace;
     position: relative;
     width: 100%;
-    max-width: 950px;
+    max-width: 1080px;
     margin: 0 auto;
     max-height: 725px;
     background-color: #FBFBFB;
